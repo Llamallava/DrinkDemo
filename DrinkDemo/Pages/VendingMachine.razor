@@ -57,7 +57,9 @@
     {
         get
         {
-            double seconds = Math.Max(4, display_text.Length * 0.22);
+            double characters_per_second = 8.0;
+            double container_offset_characters = 15.0;
+            double seconds = (container_offset_characters + display_text.Length) / characters_per_second;
             return $"--scroll-duration: {seconds.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture)}s;";
         }
     }
