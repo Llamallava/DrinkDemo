@@ -13,7 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="wwwroot\Images\Budweiser.jpg" />
+    <None Include="wwwroot\Images\Orange_Juice.jpg" />
+    <None Include="wwwroot\Images\Pepsi.jpg" />
   </ItemGroup>
 
 </Project>
