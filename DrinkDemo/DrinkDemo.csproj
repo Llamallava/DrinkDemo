@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\deploy.yml" />
     <None Include="wwwroot\Images\Budweiser.jpg" />
     <None Include="wwwroot\Images\Orange_Juice.jpg" />
     <None Include="wwwroot\Images\Pepsi.jpg" />
