@@ -15,6 +15,11 @@ namespace DrinkDemo.Models
 
         public Drink(string drink_name, bool is_carbonated)
         {
+            if (string.IsNullOrWhiteSpace(drink_name))
+            {
+                throw new ArgumentException("Drink name cannot be null or empty.", nameof(drink_name));
+            }
+
             this.drink_name = drink_name;
             this.is_carbonated = is_carbonated;
         }
