@@ -2,7 +2,8 @@
 //
 // Drink.cs
 //
-//
+// Defines the Drink class.
+// Serves as a base class for different types of drinks.
 //
 
 namespace DrinkDemo.Models
