@@ -12,3 +12,73 @@
     font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
+.vm-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.vm-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 1rem 0.5rem 0.85rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #24262b;
+    font-size: 0.85rem;
+    background: #e3e5e8;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.vm-button:active,
+.vm-button.is-active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.vm-button-image-frame {
+    --ring-color: #999;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 3px var(--ring-color);
+    transition: box-shadow 0.15s ease;
+}
+
+.vm-button.is-active .vm-button-image-frame {
+    box-shadow: 0 0 0 3px var(--ring-color), 0 0 10px 3px var(--ring-color);
+}
+
+.vm-button-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vm-button-name {
+    font-weight: 600;
+}
+
+.vm-button--juice .vm-button-image-frame {
+    --ring-color: #e8791a;
+}
+
+.vm-button--beer .vm-button-image-frame {
+    --ring-color: #c98a2c;
+}
+
+.vm-button--soda .vm-button-image-frame {
+    --ring-color: #2f6fd6;
+}
