@@ -3,10 +3,10 @@
     --panel: #14161a;
     --led: #52ffb8;
 
-    width: min(480px, 100%);
+    width: min(750px, 90vw);
     margin: 2rem auto; 
-    padding: 1.75rem; 
-    border-radius: 14px;
+    padding: 2.5rem; 
+    border-radius: 18px;
     background: var(--housing);
     box-shadow: 0 12px 24px rgba(0,0,0,0.25);
     font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -81,4 +81,51 @@
 
 .vm-button--soda .vm-button-image-frame {
     --ring-color: #2f6fd6;
+}
+
+.vm-display-housing {
+    padding: 0.9rem;
+    border-radius: 8px;
+    background: #1b1d20;
+}
+
+.vm-display {
+    position: relative;
+    overflow: hidden;
+    height: 2.6rem;
+    padding: 0 0.75rem;
+    border-radius: 4px;
+    background: var(--panel);
+}
+
+.vm-display-text {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    transform: translateY(-50%);
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.14em;
+    color: var(--led);
+    text-shadow: 0 0 6px rgba(82, 255, 184, 0.7);
+    animation: vm-scroll var(--scroll-duration, 6s) linear infinite;
+}
+
+@keyframes vm-scroll {
+    from {
+        transform: translate(0, -50%);
+    }
+
+    to {
+        transform: translate(-100%, -50%);
+    }
+}
+
+@media (max-width: 420px) {
+    .vm-buttons {
+        grid-template-columns: 1fr;
+    }
 }
