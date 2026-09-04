@@ -31,7 +31,13 @@ jobs:
 
       - name: Publish Blazor WASM
         run: dotnet publish DrinkDemo/DrinkDemo.csproj -c Release
-
+        
+      - name: Fix base href for GitHub Pages
+        run: sed -i 's|<base href="/" />|<base href="/DrinkDemo/" />|g' DrinkDemo/bin/Release/net10.0/publish/wwwroot/index.html
+        
+      - name: Verify base href was replaced
+        run: grep 'base href' DrinkDemo/bin/Release/net10.0/publish/wwwroot/index.html
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
